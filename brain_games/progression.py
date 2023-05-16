@@ -11,20 +11,20 @@ def progression():
 
     print('What number is missing in the progression?')
 
-#обозначаем колличесвто вопросов
+# обозначаем колличесвто вопросов
     correct_answer = 0
     quastion_number = 0
     while quastion_number < 3:
-        first_number = randint(1,50)
-        step = randint(1,10)
+        first_number = randint(1, 50)
+        step = randint(1, 10)
 
-#создаем прогрессию
+# создаем прогрессию
         progression = [first_number]
         for _ in range(10):
             next_value = progression[-1] + step
             progression.append(next_value)
 
-#скрываем одину из цифр
+# скрываем одину из цифр
         secret_number = randint(0, 9)
         right_answer = progression[secret_number]
         progression[secret_number] = '..'

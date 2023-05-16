@@ -14,13 +14,13 @@ def prime_game():
 
     correct_answers = 0
     question_number = 0
-    while question_number < 3:
 
-#создаем число
+# создаем вопросы
+    while question_number < 3:
         number = randint(1, 1000)
         print(f'{number}')
-        
-#проверяем простое ли число
+
+# проверяем простое ли число
         if number < 2:
             right_answer = 'no'
         else:
@@ -31,7 +31,7 @@ def prime_game():
                 else:
                     right_answer = 'yes'
 
-#просим пользователя написать ответ и проверяем его правильность
+# просим пользователя написать ответ и проверяем его правильность
         user_answer = prompt.string('Your answer: ')
         if user_answer.lower() == right_answer:
             print('Correct!')
