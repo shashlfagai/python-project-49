@@ -1,31 +1,28 @@
-from random import randint, choice
+from random import randint
 import prompt
+import math
 
 
-def calc_game():
+def gcd_game():
     print('Welcome to the Brain Games!')
 
     name = prompt.string('May I have your name? ')
 
-    print('Hello, ' + name + '!')
+    print(f'Hello, {name}')
 
-    print('What is the result of the expression?')
+    print('Find the greatest common divisor of given numbers.')
 
     correct_answer = 0
     quastion_number = 0
     while quastion_number < 3:
         first_number = randint(1, 100)
         second_number = randint(1, 100)
-        operator = '+-*'
-        randomasing_operator = choice(operator)
-        print(f'{first_number} {randomasing_operator} {second_number}')
-        if randomasing_operator == '+':
-            right_answer = first_number + second_number
-        elif randomasing_operator == '-':
-            right_answer = first_number - second_number
-        else:
-            right_answer = first_number * second_number
-        user_answer = prompt.string('Your aswer: ')
+
+        print(f'{first_number} {second_number}')
+
+        right_answer = math.gcd(first_number, second_number)
+
+        user_answer = prompt.string('Your answer: ')
         if int(user_answer) == right_answer:
             print('Correct!')
             quastion_number += 1
