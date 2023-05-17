@@ -18,7 +18,7 @@ def calc_game():
         second_number = randint(1, 100)
         operator = '+-*'
         randomasing_operator = choice(operator)
-        print(f'{first_number} {randomasing_operator} {second_number}')
+        print(f'Question: {first_number} {randomasing_operator} {second_number}')
         if randomasing_operator == '+':
             right_answer = first_number + second_number
         elif randomasing_operator == '-':
