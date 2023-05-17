@@ -1,4 +1,4 @@
-from ..calc import calc_game
+from ..games.calc import calc_game
 
 
 def main():

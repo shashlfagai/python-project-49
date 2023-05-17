@@ -3,6 +3,15 @@ import prompt
 import math
 
 
+def is_prime(number):
+    if number < 2:
+        return False
+    for i in range(2, int(math.sqrt(number)) + 1):
+        if number % i == 0:
+            return False
+    return True
+
+
 def prime_game():
     print('Welcome to the Brain Games!')
 
@@ -15,23 +24,15 @@ def prime_game():
     correct_answers = 0
     question_number = 0
 
-# создаем вопросы
     while question_number < 3:
         number = randint(1, 1000)
         print(f'Question: {number}')
 
-# проверяем простое ли число
-        if number < 2:
-            right_answer = 'no'
+        if is_prime(number):
+            right_answer = 'yes'
         else:
-            for i in range(2, int(math.sqrt(number)) + 1):
-                if number % i == 0:
-                    right_answer = 'no'
-                    break
-                else:
-                    right_answer = 'yes'
+            right_answer = 'no'
 
-# просим пользователя написать ответ и проверяем его правильность
         user_answer = prompt.string('Your answer: ')
         if user_answer.lower() == right_answer:
             print('Correct!')

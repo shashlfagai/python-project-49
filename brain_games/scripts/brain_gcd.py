@@ -1,4 +1,4 @@
-from ..gcd import gcd_game
+from ..games.gcd import gcd_game
 
 
 def main():

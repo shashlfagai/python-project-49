@@ -1,4 +1,4 @@
-from ..even import even_number_game
+from ..games.even import even_number_game
 
 
 def main():

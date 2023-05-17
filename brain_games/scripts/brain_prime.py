@@ -1,4 +1,4 @@
-from ..prime import prime_game
+from ..games.prime import prime_game
 
 
 def main():

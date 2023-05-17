@@ -1,4 +1,4 @@
-from ..progression import progression
+from ..games.progression import progression
 
 
 def main():
