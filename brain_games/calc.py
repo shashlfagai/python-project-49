@@ -33,7 +33,7 @@ def calc_game():
         else:
             print(f"'{user_answer}' is wrong answer ;(. "
                   f"Correct answer was '{right_answer}'.\n"
-                  f"Let's try again, {name}")
+                  f"Let's try again, {name}!")
             break
     if correct_answer == 3:
         print(f'Congratulations, {name}!')
