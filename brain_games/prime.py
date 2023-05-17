@@ -8,7 +8,7 @@ def prime_game():
 
     name = prompt.string('May I have your name? ')
 
-    print(f'Hello, {name}')
+    print(f'Hello, {name}!')
 
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
@@ -18,7 +18,7 @@ def prime_game():
 # создаем вопросы
     while question_number < 3:
         number = randint(1, 1000)
-        print(f'{number}')
+        print(f'Question: {number}')
 
 # проверяем простое ли число
         if number < 2:

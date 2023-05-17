@@ -7,7 +7,7 @@ def progression():
 
     name = prompt.string('May I have your name? ')
 
-    print(f'Hello, {name}')
+    print(f'Hello, {name}!')
 
     print('What number is missing in the progression?')
 
@@ -29,7 +29,7 @@ def progression():
         right_answer = progression[secret_number]
         progression[secret_number] = '..'
 
-        print(f'{progression}')
+        print(f'Question: {progression}')
 
         user_answer = prompt.string('Your answer: ')
 
@@ -40,7 +40,7 @@ def progression():
         else:
             print(f"'{user_answer}' is wrong answer ;(. "
                   f"Correct answer was '{right_answer}'.\n"
-                  f"Let's try again, {name}")
+                  f"Let's try again, {name}!")
             break
     if correct_answer == 3:
         print(f'Congratulations, {name}!')
