@@ -29,7 +29,7 @@ def progression():
         right_answer = progression[secret_number]
         progression[secret_number] = '..'
 
-        print(f'Question: {progression}')
+        print('Question: ' + ' '.join(map(str, progression)))
 
         user_answer = prompt.string('Your answer: ')
 
